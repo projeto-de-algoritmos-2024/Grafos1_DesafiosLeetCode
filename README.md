@@ -17,7 +17,7 @@ Nosso projeto foi resolução de problemas do LeetCode.
 ## Screenshots do Projeto em Funcionamento
 Aqui estão algumas imagens do projeto em funcionamento:
 
-#### Desafio 1 MEDIUM [785. Is Graph Bipartite? (MEDIUM)](https://leetcode.com/problems/is-graph-bipartite/description/?envType=problem-list-v2&envId=graph&difficulty=MEDIUM)
+#### Desafio 1 [785. Is Graph Bipartite? (MEDIUM)](https://leetcode.com/problems/is-graph-bipartite/description/?envType=problem-list-v2&envId=graph&difficulty=MEDIUM)
 
 ![Screenshot Desafio 1](assets/Desafio1Passed.png)
 
