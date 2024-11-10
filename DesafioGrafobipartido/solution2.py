@@ -16,18 +16,20 @@ def desenfileirar():
 
 
 class Solution(object):
-    def bfs_verifica_conflitos(self, grafo, inicio):
+    def isBipartite(self, grafo):
         cor = [-1] * len(grafo)
-        enfileirar(inicio)
-        cor[inicio] = 0
 
-        while fila:
-            no = desenfileirar()
-            for vizinho in grafo[no]:
-                if cor[vizinho] == -1:
-                    cor[vizinho] = 1 - cor[no]  # Atribui cor alternad
-                    enfileirar(vizinho)
-                elif cor[vizinho] == cor[no]:
-                    return False  # Conflito encontrado, não é bipartido
+        for inicio in range(len(grafo)):
+            if cor[inicio] == -1:
+                enfileirar(inicio)
+                cor[inicio] = 0
 
-        return True
+                while fila:
+                    no = desenfileirar()
+                    for vizinho in grafo[no]:
+                        if cor[vizinho] == -1:
+                            cor[vizinho] = 1 - cor[no] # Atribui cor alternad
+                            enfileirar(vizinho)
+                        elif cor[vizinho] == cor[no]:
+                            return False # Conflito encontrado, não é bipartido
+        return True 
