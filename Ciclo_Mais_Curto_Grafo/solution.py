@@ -1,28 +1,45 @@
+fila = []
+
+# Enfileira
+def enfileirar(item):
+    fila.append(item)
+
+# Desenfileira
+def desenfileirar():
+    if not fila:
+        return None
+    return fila.pop(0)
+
 class Solution(object):
-    def bfs_com_distancias(self, n, arestas, inicio):
-        # Construir o grafo
+    def findShortestCycle(self, n, arestas):
+        # Construir o grafo como lista de adjacência
         grafo = [[] for _ in range(n)]
         for u, v in arestas:
             grafo[u].append(v)
             grafo[v].append(u)
 
-        dist = [-1] * n
-        fila = []
-        fila.append(inicio)
-        dist[inicio] = 0
+        comprimento_min_ciclo = float('inf')
 
-        while fila:
-            u = fila.pop(0)
-            for v in grafo[u]:
-                if dist[v] == -1:
-                    dist[v] = dist[u] + 1
-                    fila.append(v)
+        for inicio in range(n):
+            dist = [-1] * n
+            pai = [-1] * n
+            dist[inicio] = 0
 
-        return dist
-    
-#Caso de teste
-solucao = Solution()
-n = 5
-arestas = [[0,1],[0,2],[1,3],[1,4]]
-inicio = 0
-print(solucao.bfs_com_distancias(n, arestas, inicio))
+            # Limpar a fila antes de cada BFS
+            global fila
+            fila = []
+            enfileirar(inicio)
+
+            while fila:
+                u = desenfileirar()
+                for v in grafo[u]:
+                    if dist[v] == -1:
+                        dist[v] = dist[u] + 1
+                        pai[v] = u
+                        enfileirar(v)
+                    elif pai[u] != v:
+                        # Ciclo detectado
+                        comprimento_ciclo = dist[u] + dist[v] + 1
+                        comprimento_min_ciclo = min(comprimento_min_ciclo, comprimento_ciclo)
+
+        return comprimento_min_ciclo if comprimento_min_ciclo != float('inf') else -1
