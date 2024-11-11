@@ -24,4 +24,8 @@ Aqui estão algumas imagens do projeto em funcionamento:
 
 #### Desafio 2 [2608. Shortest Cycle in a Graph (HARD)](https://leetcode.com/problems/shortest-cycle-in-a-graph/description/?envType=problem-list-v2&envId=graph&difficulty=HARD)
 
-![Screenshot Desafio 1](assets/Desafio2Passed.png)
+![Screenshot Desafio 2](assets/Desafio2Passed.png)
+
+#### Desafio 3 [2876. Count Visited Nodes in a Directed Graph(HARD)](https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph/description/?envType=problem-list-v2&envId=graph&difficulty=HARD)
+
+![Screenshot Desafio 2](assets/Desafio3Passed.png)
