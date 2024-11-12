@@ -14,6 +14,9 @@
 
 Nosso projeto foi resolução de problemas do LeetCode.
 
+## Vídeo de apresentação
+[Link para o vídeo de apresentação](https://youtu.be/XzEHqf3ENY0)
+
 ## Screenshots do Projeto em Funcionamento
 
 Aqui estão algumas imagens do projeto em funcionamento:
@@ -32,3 +35,6 @@ Aqui estão algumas imagens do projeto em funcionamento:
 
 ### Desafio 4 [913. Cat and Mouse(HARD)](https://leetcode.com/problems/cat-and-mouse/description/)
 ![image](https://github.com/user-attachments/assets/70132226-f467-4b1b-a76e-4c077ae569e1)
+
+
+
